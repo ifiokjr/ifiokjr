@@ -3,7 +3,7 @@
 <p align="center">I build games, apps, and the tools I need along the way.</p>
 
 <p align="center">
-  <a href="https://ifiokjr.com/">Website</a> ·
+  <a href="https://ifiokjr.com/"><img src="assets/website.svg" alt="Website" height="20"></a>
   <a href="https://www.linkedin.com/in/ifiokjr/"><img src="assets/linkedin.svg" alt="LinkedIn" height="20"></a>
   <a href="https://x.com/ifiokjr"><img src="assets/x.svg" alt="X" height="20"></a>
 </p>
