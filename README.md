@@ -27,7 +27,7 @@ I'm working on games with motion controls, expressive characters, and progressio
 | [Bitflip](https://github.com/ifiokjr/bitflip) | A collaborative pixel canvas on Solana, built with Flutter. |
 | [Lootbox](https://github.com/pina-rs/lootbox) | An experimental, composable random-reward primitive for Solana. |
 
-I've also been working on [MDT](https://github.com/ifiokjr/mdt) to keep documentation in sync, [lspee](https://github.com/ifiokjr/lspee) to share language-server access, and [Monostyle](https://github.com/ifiokjr/monostyle) to make code readability easier to measure and improve. I want these tools to be useful for both people and coding agents.
+I've also been working on [MDT](https://github.com/ifiokjr/mdt) to keep documentation in sync and [Monostyle](https://github.com/ifiokjr/monostyle) to make code readability easier to measure and improve. I want these tools to be useful for both people and coding agents.
 
 ## Open Source
 
