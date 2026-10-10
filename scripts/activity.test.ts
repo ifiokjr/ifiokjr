@@ -7,6 +7,7 @@ import {
   summarize,
 } from "./activity.ts";
 import { activitySvg, focusSvg, projectSlices, xml } from "./svg.ts";
+import { countsHtml } from "./html.ts";
 
 /** Defines explicit events so expected metrics are independent of the counting implementation. */
 function event(
@@ -87,6 +88,7 @@ test("rates use complete months, leap-year pace and a fixed snapshot", () => {
     JSON.stringify(summary),
     activitySvg(summary),
     focusSvg(summary, true),
+    countsHtml(summary),
   ]) {
     assert.doesNotMatch(
       output,
@@ -144,4 +146,17 @@ test("SVG content escapes XML and includes an accessible description", () => {
   assert.match(activitySvg(summary), /aria-labelledby="title description"/);
   assert.match(activitySvg(summary), /<desc id="description">/);
   assert.match(focusSvg(summary, true), /fill="#0d1117"/);
+});
+
+test("the counts page gives textual values with table headers and no links to private projects", () => {
+  const summary = summarize(
+    [event("private", "2024-02-01T12:00:00Z", "direct", true)],
+    new Date("2024-02-15T12:00:00Z"),
+    "accessible",
+  );
+  const html = countsHtml(summary);
+  assert.match(html, /<caption>Monthly rates<\/caption>/);
+  assert.match(html, /<th scope="row">Private projects<\/th>/);
+  assert.match(html, /1 changes so far/);
+  assert.doesNotMatch(html, /github.com\/Private|secret-owner/);
 });

@@ -55,7 +55,7 @@ I'm trying to build more consistently. These charts track PRs I open and direct 
   <img src="https://ifiokjr.github.io/ifiokjr/focus.svg" alt="A chart showing each project's share of my PRs and direct commits over the last 90 days. Private projects are grouped together." width="840">
 </picture>
 
-Updated hourly. The current month's pace is an estimate; the averages use complete months. [How this is counted](docs/activity.md) · [Live counts](https://ifiokjr.github.io/ifiokjr/activity.json).
+Updated hourly. The current month's pace is an estimate; the averages use complete months. [How this is counted](docs/activity.md) · [Live counts](https://ifiokjr.github.io/ifiokjr/).
 
 I care about how things look, how they feel, and whether the code is easy to understand. Animation, accessibility, and the small details matter to me.
 
