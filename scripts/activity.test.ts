@@ -157,6 +157,6 @@ test("the counts page gives textual values with table headers and no links to pr
   const html = countsHtml(summary);
   assert.match(html, /<caption>Monthly rates<\/caption>/);
   assert.match(html, /<th scope="row">Private projects<\/th>/);
-  assert.match(html, /1 changes so far/);
+  assert.match(html, /1 change so far/);
   assert.doesNotMatch(html, /github.com\/Private|secret-owner/);
 });

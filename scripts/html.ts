@@ -5,19 +5,21 @@ import { xml } from "./svg.ts";
 export function countsHtml(summary: Summary): string {
   const number = (value: number) =>
     value.toLocaleString("en-GB", { maximumFractionDigits: 1 });
+  const changes = (value: number) => {
+    const text = number(value);
+
+    return `${text} ${text === "1" ? "change" : "changes"}`;
+  };
   const rates = [
-    ["This month", `${number(summary.current.total)} changes so far`],
-    ["Previous month", `${number(summary.previous.total)} changes`],
-    ["Last 3 complete months", `${number(summary.average3)} changes per month`],
-    [
-      "Last 12 complete months",
-      `${number(summary.average12)} changes per month`,
-    ],
+    ["This month", `${changes(summary.current.total)} so far`],
+    ["Previous month", changes(summary.previous.total)],
+    ["Last 3 complete months", `${changes(summary.average3)} per month`],
+    ["Last 12 complete months", `${changes(summary.average12)} per month`],
     [
       "Current month-end pace",
       summary.pace === null
         ? "Available after the first 24 hours"
-        : `Approximately ${number(summary.pace)} changes`,
+        : `Approximately ${changes(summary.pace)}`,
     ],
   ];
   const rateRows = rates
